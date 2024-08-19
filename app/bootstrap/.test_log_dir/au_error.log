@@ -1,0 +1,1051 @@
+2024-08-01 17:08:39.861 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 54, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 81, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 88, in invoke
+    r = {**planner_input, self.output_key: res, 'chat_history': self.generate_memories(chat_history)}
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 138, in generate_memories
+    memory_dict = {"role":message.role,"content": message.content, "type": message.type}
+AttributeError: 'HumanMessage' object has no attribute 'role'
+
+2024-08-01 17:12:17.538 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 54, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 81, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 89, in invoke
+    r = {**planner_input, self.output_key: res, 'chat_history': self.generate_memories(chat_history)}
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 139, in generate_memories
+    memory_dict = {"role":message.role,"content": message.content, "type": message.type}
+AttributeError: 'HumanMessage' object has no attribute 'role'
+
+2024-08-01 17:15:59.506 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 54, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 81, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 90, in invoke
+    r = {**planner_input, self.output_key: res, 'chat_history': self.generate_memories(chat_history)}
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 140, in generate_memories
+    memory_dict = {"role":message.role,"content": message.content, "type": message.type}
+AttributeError: 'HumanMessage' object has no attribute 'role'
+
+2024-08-01 17:18:17.536 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 54, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 81, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 91, in invoke
+    r = {**planner_input, self.output_key: res, 'chat_history': self.generate_memories(chat_history)}
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 141, in generate_memories
+    memory_dict = {"role":message.role,"content": message.content, "type": message.type}
+AttributeError: 'HumanMessage' object has no attribute 'role'
+
+2024-08-01 17:47:07.831 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 54, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 81, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 92, in invoke
+    r = {**planner_input, self.output_key: res, 'chat_history': self.generate_memories(chat_history)}
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 143, in generate_memories
+    memory_dict = {"role": message.role, "content": message.content, "type": message.type}
+AttributeError: 'HumanMessage' object has no attribute 'role'
+
+2024-08-02 09:00:20.072 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 54, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 81, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 92, in invoke
+    r = {**planner_input, self.output_key: res, 'chat_history': self.generate_memories(chat_history)}
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 143, in generate_memories
+    memory_dict = {"role": message.role, "content": message.content, "type": message.type}
+AttributeError: 'HumanMessage' object has no attribute 'role'
+
+2024-08-02 09:01:39.572 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 54, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 81, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 92, in invoke
+    r = {**planner_input, self.output_key: res, 'chat_history': self.generate_memories(chat_history)}
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 143, in generate_memories
+    memory_dict = {"role": message.role, "content": message.content, "type": message.type}
+AttributeError: 'HumanMessage' object has no attribute 'role'
+
+2024-08-02 09:17:56.876 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 54, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 81, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 92, in invoke
+    r = {**planner_input, self.output_key: res, 'chat_history': self.generate_memories(chat_history)}
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 143, in generate_memories
+    memory_dict = {"role": message.role, "content": message.content, "type": message.type}
+AttributeError: 'HumanMessage' object has no attribute 'role'
+
+2024-08-02 09:24:20.683 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 54, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 81, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 93, in invoke
+    r = {**planner_input, self.output_key: res, 'chat_history': self.generate_memories(chat_history)}
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 144, in generate_memories
+    memory_dict = {"role": message.role, "content": message.content, "type": message.type}
+AttributeError: 'HumanMessage' object has no attribute 'role'
+
+2024-08-02 11:05:46.433 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 54, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 81, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 89, in invoke
+    res = self.invoke_chain(agent_model, chain_with_history, planner_input, chat_history, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 115, in invoke_chain
+    res = chain.invoke(input=planner_input, config={"configurable": {"session_id": "test_session_id"}})
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\langchain_core\runnables\base.py", line 2499, in invoke
+    print(f'self.step {self.step}')
+AttributeError: 'RunnableSequence' object has no attribute 'step'. Did you mean: 'steps'?
+
+2024-08-02 14:16:52.065 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 55, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 82, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 99, in invoke
+    r = {**planner_input, self.output_key: res, 'chat_history': self.generate_memories(chat_history)}
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 155, in generate_memories
+    memory_dict = {"role": message.role, "content": message.content, "type": message.type}
+AttributeError: 'HumanMessage' object has no attribute 'role'
+
+2024-08-02 14:31:23.301 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 55, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 82, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 99, in invoke
+    r = {**planner_input, self.output_key: res, 'chat_history': self.generate_memories(chat_history)}
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 155, in generate_memories
+    memory_dict = {"role": message.role, "content": message.content, "type": message.type}
+AttributeError: 'HumanMessage' object has no attribute 'role'
+
+2024-08-02 14:32:36.225 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 55, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 82, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 99, in invoke
+    r = {**planner_input, self.output_key: res, 'chat_history': self.generate_memories(chat_history)}
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 155, in generate_memories
+    memory_dict = {"role": message.role, "content": message.content, "type": message.type}
+AttributeError: 'HumanMessage' object has no attribute 'role'
+
+2024-08-02 14:39:51.015 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 55, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 82, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 99, in invoke
+    r = {**planner_input, self.output_key: res, 'chat_history': self.generate_memories(chat_history)}
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 155, in generate_memories
+    memory_dict = {"role": message.role, "content": message.content, "type": message.type}
+AttributeError: 'HumanMessage' object has no attribute 'role'
+
+2024-08-02 14:47:03.634 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 55, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 82, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 99, in invoke
+    r = {**planner_input, self.output_key: res, 'chat_history': self.generate_memories(chat_history)}
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 155, in generate_memories
+    memory_dict = {"role": message.role, "content": message.content, "type": message.type}
+AttributeError: 'HumanMessage' object has no attribute 'role'
+
+2024-08-02 14:48:10.955 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 55, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 82, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 99, in invoke
+    r = {**planner_input, self.output_key: res, 'chat_history': self.generate_memories(chat_history)}
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 155, in generate_memories
+    memory_dict = {"role": message.role, "content": message.content, "type": message.type}
+AttributeError: 'HumanMessage' object has no attribute 'role'
+
+2024-08-02 15:01:08.940 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 55, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 82, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 99, in invoke
+    r = {**planner_input, self.output_key: res, 'chat_history': self.generate_memories(chat_history)}
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 155, in generate_memories
+    memory_dict = {"role": message.role, "content": message.content, "type": message.type}
+AttributeError: 'HumanMessage' object has no attribute 'role'
+
+2024-08-02 15:01:58.413 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 55, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 82, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 99, in invoke
+    r = {**planner_input, self.output_key: res, 'chat_history': self.generate_memories(chat_history)}
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 155, in generate_memories
+    memory_dict = {"role": message.role, "content": message.content, "type": message.type}
+AttributeError: 'HumanMessage' object has no attribute 'role'
+
+2024-08-02 15:04:00.407 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 55, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 82, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 99, in invoke
+    r = {**planner_input, self.output_key: res, 'chat_history': self.generate_memories(chat_history)}
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 155, in generate_memories
+    memory_dict = {"role": message.role, "content": message.content, "type": message.type}
+AttributeError: 'HumanMessage' object has no attribute 'role'
+
+2024-08-02 15:05:59.574 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 55, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 82, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 99, in invoke
+    r = {**planner_input, self.output_key: res, 'chat_history': self.generate_memories(chat_history)}
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 155, in generate_memories
+    memory_dict = {"role": message.role, "content": message.content, "type": message.type}
+AttributeError: 'HumanMessage' object has no attribute 'role'
+
+2024-08-02 15:31:53.864 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 49, in service_run
+    return make_standard_response(success=True, result=result,
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 80, in make_standard_response
+    return make_response(jsonify(response_data), status_code)
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\json\provider.py", line 215, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\json\provider.py", line 180, in dumps
+    return json.dumps(obj, **kwargs)
+  File "C:\ProgramData\Anaconda3\envs\age\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\ProgramData\Anaconda3\envs\age\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\ProgramData\Anaconda3\envs\age\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\json\provider.py", line 120, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type AIMessage is not JSON serializable
+
+2024-08-02 16:12:02.924 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 55, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 82, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 78, in invoke
+    memory.load_memory_variables({})
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\pydantic\main.py", line 828, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'RoleMemory' object has no attribute 'load_memory_variables'
+
+2024-08-02 16:13:46.878 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 55, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 82, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 78, in invoke
+    chat_history.load_memory_variables({})
+AttributeError: 'InMemoryChatMessageHistory' object has no attribute 'load_memory_variables'
+
+2024-08-02 16:18:11.389 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 55, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 82, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 78, in invoke
+    LOGGER.debug(f"chat_history.load_memory {chat_history.load_memory}")
+AttributeError: 'InMemoryChatMessageHistory' object has no attribute 'load_memory'
+
+2024-08-02 16:20:57.212 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 55, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 82, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 69, in invoke
+    chat_history = memory.as_langchain().chat_memory
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\memory\role\role_chat_memory.py", line 56, in as_langchain
+    return RoleConversationSummaryBufferMemory(llm=self.llm.as_langchain(), memory_key=self.memory_key,
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\memory\role\role_langchain_instance.py", line 52, in __init__
+    super().__init__(**kwargs)
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\pydantic\v1\main.py", line 339, in __init__
+    values, fields_set, validation_error = validate_model(__pydantic_self__.__class__, data)
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\pydantic\v1\main.py", line 1064, in validate_model
+    value = field.get_default()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\pydantic\v1\fields.py", line 437, in get_default
+    return smart_deepcopy(self.default) if self.default_factory is None else self.default_factory()
+  File "F:\xuexi\python\agentUniverse\law_game_app\app\core\memory\role\role_langchain_instance.py", line 45, in __init__
+    super().__init__(**kwargs)
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\pydantic\v1\main.py", line 341, in __init__
+    raise validation_error
+pydantic.v1.error_wrappers.ValidationError: 1 validation error for RoleConversationSummaryBufferMemory
+llm
+  field required (type=value_error.missing)
+
+2024-08-02 16:23:49.390 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 55, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 82, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 78, in invoke
+    LOGGER.debug(f"chat_history.load_memory {chat_history.load_memory}")
+AttributeError: 'InMemoryChatMessageHistory' object has no attribute 'load_memory'
+
+2024-08-02 16:27:09.089 | ERROR    | [default] | agentuniverse.agent_serve.web.flask_server:handle_exception:136 | Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\age\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\web_util.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\flask_server.py", line 47, in service_run
+    result = request_task.run()
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 141, in run
+    raise e
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\web\request_task.py", line 134, in run
+    result = self.func(**self.kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\agent_serve\service_instance.py", line 34, in run
+    return self.__service.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\service\drama_service.py", line 57, in run
+    redata = self.agent.run(**kwargs)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 98, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\law_drama\law_drama_agent.py", line 137, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 62, in invoke
+    return self.agents_run(role_agents, planner_config, agent_model, planner_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\law_drama\law_drama_planner.py", line 125, in agents_run
+    output_object: OutputObject = agent.run(**agent_input)
+  File "F:\xuexi\python\agentUniverse\agentuniverse\base\annotation\trace.py", line 130, in wrapper_sync
+    result = func(*args, **kwargs)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 55, in run
+    planner_result = self.execute(input_object, agent_input)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\agent\role_agent.py", line 82, in execute
+    planner_result = planner_base.invoke(self.agent_model, agent_input, input_object)
+  File "F:\xuexi\python\agentUniverse\drama_app\app\core\planner\role_planner.py", line 78, in invoke
+    LOGGER.debug(f"chat_history.load_memory {chat_history.load_memory}")
+AttributeError: 'InMemoryChatMessageHistory' object has no attribute 'load_memory'
+
+2024-08-11 16:50:08.692 | ERROR    | [default] | agentuniverse.agent_serve.web.request_task:receive_steps:97 | request task execute Fail: Service law_service not found.
+2024-08-11 17:06:46.139 | ERROR    | [default] | agentuniverse.agent_serve.web.request_task:receive_steps:97 | request task execute Fail: Object of type Queue is not JSON serializable

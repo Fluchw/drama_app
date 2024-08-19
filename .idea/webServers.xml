@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="234666a5-64b4-4d79-a28e-5fda12b9fdb7" name="drama">
+        <fileTransfer rootFolder="/opt/model" accessType="SFTP" host="8.134.126.94" port="22202" sshConfigId="0f1a8198-4524-4b67-9f13-f43f1168b709" sshConfig="root@8.134.126.94:22202 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
